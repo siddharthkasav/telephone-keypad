@@ -1,0 +1,138 @@
+<head>
+    <title>Telephone Pad</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        .auto-style1 {
+            font-size: large;
+        }
+    </style>
+</head>
+<body style="background-color: #FFCC99">
+
+    <p class="auto-style1">
+        This is an example of a Telephone Pad in Javascript
+    <p>
+        <input id="Number1" type="button" value="1" onclick="addNumber1()" />
+        <input id="Number2" type="button" value="2" onclick="addNumber2()" />
+        <input id="Number3" type="button" value="3" onclick="addNumber3()" />
+    </p>
+    <p>
+        <input id="Number4" type="button" value="4" onclick="addNumber4()" />
+        <input id="Number5" type="button" value="5" onclick="addNumber5()" />
+        <input id="Number6" type="button" value="6" onclick="addNumber6()" />
+    </p>
+    <p>
+        <input id="Number7" type="button" value="7" onclick="addNumber7()" />
+        <input id="Number8" type="button" value="8" onclick="addNumber8()" />
+        <input id="Number9" type="button" value="9" onclick="addNumber9()" />
+    </p>
+    <p>
+        <input id="Star" type="button" value="*" onclick="addStar()" />
+        <input id="Number0" type="button" value="0" onclick="addNumber0()" />
+        <input id="Hashtag" type="button" value="#" onclick="addHash()" />
+    </p>
+    <p>
+        <input id="call" type="button" value="CALL" onclick="verifyNumbers()" />
+        <input id="Reset1" type="reset" value="RESET" onclick="clearAll()" />
+    </p>
+    <p>
+        <input id="phoneNum" type="text" />
+    </p>
+
+
+    <script>
+        var i = 0;
+        var value = [];
+        var phone = "";
+        function addNumber1() {
+            if (i < 10) {
+                phone = phone + document.getElementById("Number1").value;
+                i = i + 1;
+                document.getElementById("phoneNum").value += "1";
+            }
+        }
+        function addNumber2() {
+            if (i < 10) {
+                phone = phone + document.getElementById("Number2").value;
+                i = i + 1;
+                document.getElementById("phoneNum").value += "2";
+            }
+        }
+
+        function addNumber3() {
+            if (i < 10) {
+                phone = phone + document.getElementById("Number3").value;
+                i = i + 1;
+                document.getElementById("phoneNum").value += "3";
+            }
+        }
+        function addNumber4() {
+            if (i < 10) {
+                phone = phone + document.getElementById("Number4").value;
+                i = i + 1;
+                document.getElementById("phoneNum").value += "4";
+            }
+        }
+        function addNumber5() {
+            if (i < 10) {
+                phone = phone + document.getElementById("Number5").value;
+                i = i + 1;
+                document.getElementById("phoneNum").value += "5";
+            }
+        }
+
+        function addNumber6() {
+            if (i < 10) {
+                phone = phone + document.getElementById("Number6").value;
+                i = i + 1;
+                document.getElementById("phoneNum").value += "6";
+            }
+        }
+
+        function addNumber7() {
+            if (i < 10) {
+                phone = phone + document.getElementById("Number7").value;
+                i = i + 1;
+                document.getElementById("phoneNum").value += "7";
+            }
+        }
+        function addNumber8() {
+            if (i < 10) {
+                phone = phone + document.getElementById("Number8").value;
+                i = i + 1;
+                document.getElementById("phoneNum").value += "8";
+            }
+        }
+
+        function addNumber9() {
+            if (i < 10) {
+                phone = phone + document.getElementById("Number9").value;
+                i = i + 1;
+                document.getElementById("phoneNum").value += "9";
+
+            }
+        }
+        
+        function clearAll() {
+            document.getElementById("phoneNum").value = "";
+;
+            return false;
+        }
+
+        function verifyNumbers() {
+
+            document.getElementById("phoneNum").value = phone;
+
+            if (phone == 10) {
+                alert("Thanks for your input!");
+            }
+            else {
+                alert("Please enter a valid number");
+               
+            }
+        }
+
+    </script>
+
+</body>
+</html>
